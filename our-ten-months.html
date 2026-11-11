@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ten months of us — meri betu & your jaanuu 💕</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Sour+Gummy:wght@400;500;600;700;800&family=Mystery+Quest&family=Handlee&family=Matemasie&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        html, body { overflow-x: hidden; }
+
+        body {
+            font-family: 'Sour Gummy', cursive;
+            color: #3A2138;
+            background: #FFFAFC;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .font-heading { font-family: 'DynaPuff', cursive; letter-spacing: 1px; }
+        .font-sub     { font-family: 'Sour Gummy', cursive; font-weight: 700; }
+        .font-display { font-family: 'Mystery Quest', cursive; letter-spacing: 2px; }
+        .font-para    { font-family: 'Handlee', cursive; }
+        .font-ext     { font-family: 'Matemasie', cursive; }
+
+        /* ============================================================ */
+        /* HERO                                                          */
+        /* ============================================================ */
+        .hero {
+            min-height: 100vh;
+            min-height: 100svh;
+            position: relative;
+            padding: 64px 24px 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle at 15% 20%, #FFD6E8 0%, transparent 35%),
+                radial-gradient(circle at 85% 80%, #E0C3FC 0%, transparent 38%),
+                radial-gradient(circle at 50% 60%, #FFE5B4 0%, transparent 40%),
+                #FFFAFC;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background-image: radial-gradient(circle, rgba(255,143,181,0.10) 1.5px, transparent 1.5px);
+            background-size: 28px 28px;
+            pointer-events: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+            width: min(100%, 960px);
+        }
+        .hero-gif {
+            width: clamp(140px, 18vw, 200px);
+            height: clamp(140px, 18vw, 200px);
+            object-fit: contain;
+            margin: 0 auto 8px;
+            display: block;
+            background: transparent;
+            animation: floatA 5s ease-in-out infinite;
+        }
+        .hero h1 {
+            font-family: 'DynaPuff', cursive;
+            font-size: clamp(2.65rem, 7.5vw, 5.8rem);
+            line-height: 1.04;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-wrap: balance;
+        }
+        .hero .amp {
+            font-family: 'Mystery Quest', cursive;
+            color: #FF5A8A;
+            display: inline-block;
+            transform: rotate(-8deg);
+            margin: 0 8px;
+        }
+        .hero-tag {
+            font-family: 'Matemasie', cursive;
+            font-size: 1.1rem;
+            color: #FF6B9D;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+        .hero-sub {
+            font-family: 'Handlee', cursive;
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: #5A3A4E;
+            line-height: 1.45;
+            margin: 18px 0 0;
+            text-wrap: balance;
+        }
+        .hero-nav {
+            max-width: 760px;
+            margin: 30px auto 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .hero-nav a {
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 18px;
+            border: 1px solid rgba(255, 143, 181, 0.55);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.78);
+            color: #5A3A4E;
+            font-family: 'Sour Gummy', cursive;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(90, 58, 78, 0.08);
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero-nav a:hover {
+            background: white;
+            box-shadow: 0 7px 16px rgba(255, 90, 138, 0.18);
+            transform: translateY(-2px);
+        }
+        .hero-nav a:focus-visible {
+            outline: 3px solid #8E7AD8;
+            outline-offset: 3px;
+        }
+        .hero-photos {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .hero-photos .pol {
+            position: absolute;
+            background: white;
+            padding: 8px 8px 26px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border-radius: 4px;
+        }
+        .hero-photos .pol img {
+            display: block;
+            border-radius: 2px;
+            height: auto;
+            object-fit: contain;
+        }
+        .hero-photos .pol-1 { top: 10%; left: 4%; transform: rotate(-9deg); animation: floatA 6s ease-in-out infinite; }
+        .hero-photos .pol-2 { top: 14%; right: 6%; transform: rotate(8deg); animation: floatB 7s ease-in-out infinite; }
+        .hero-photos .pol-3 { bottom: 12%; left: 8%; transform: rotate(7deg); animation: floatA 8s ease-in-out infinite; animation-delay: 1s; }
+        .hero-photos .pol-4 { bottom: 8%; right: 10%; transform: rotate(-6deg); animation: floatB 6.5s ease-in-out infinite; animation-delay: 1.5s; }
+        @keyframes floatA { 0%,100% { transform: translateY(0) rotate(-9deg); } 50% { transform: translateY(-15px) rotate(-7deg); } }
+        @keyframes floatB { 0%,100% { transform: translateY(0) rotate(8deg); } 50% { transform: translateY(-18px) rotate(10deg); } }
+
+        .scroll-arrow {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Handlee', cursive;
+            color: #FF5A8A;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            animation: bobDown 2s ease-in-out infinite;
+            z-index: 10;
+        }
+        @keyframes bobDown { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+        .scroll-arrow .arr {
+            width: 30px; height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF8FB5, #FF5A8A);
+            color: white;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 4px 12px rgba(255,90,138,0.4);
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, #FF5A8A 0%, #B79DFE 50%, #FFC857 80%, #FF5A8A 100%);
+            background-size: 250% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 6s linear infinite;
+        }
+        @keyframes shimmer { 0% { background-position: -250% 0; } 100% { background-position: 250% 0; } }
+
+        /* ============================================================ */
+        /* SECTION SHELL                                                 */
+        /* ============================================================ */
+        section {
+            padding: 100px 24px;
+            position: relative;
+        }
+        .section-eyebrow {
+            display: inline-block;
+            font-family: 'Matemasie', cursive;
+            font-size: 0.95rem;
+            color: white;
+            background: linear-gradient(135deg, #FF8FB5, #FF5A8A);
+            padding: 6px 18px;
+            border-radius: 999px;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+            box-shadow: 0 4px 0 #C94977;
+        }
+        .section-eyebrow.lilac { background: linear-gradient(135deg, #B79DFE, #8E7AD8); box-shadow: 0 4px 0 #6D5BB8; }
+        .section-eyebrow.yellow { background: linear-gradient(135deg, #FFE08A, #FFC857); color: #5A3A00; box-shadow: 0 4px 0 #E8A93C; }
+
+        .section-title {
+            font-family: 'DynaPuff', cursive;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.05;
+            color: #3A2138;
+            margin-bottom: 14px;
+        }
+        .section-lead {
+            font-family: 'Handlee', cursive;
+            font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+            color: #5A3A4E;
+            max-width: 600px;
+        }
+
+        /* wavy section divider */
+        .wavy {
+            display: block;
+            width: 100%;
+            height: 60px;
+        }
+
+        /* ============================================================ */
+        /* CHAPTER 1: HOW WE MET — split layout                          */
+        /* ============================================================ */
+        .met-section { background: linear-gradient(180deg, #FFFAFC 0%, #FFF5FA 100%); }
+        .met-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .met-text p { font-family: 'Handlee', cursive; }
+        .met-quote {
+            font-family: 'Mystery Quest', cursive;
+            color: #FF5A8A;
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            border-left: 4px solid #FFB8D1;
+            padding: 8px 0 8px 22px;
+            margin: 26px 0;
+            line-height: 1.3;
+        }
+        .met-photos {
+            position: relative;
+            height: 480px;
+        }
+        .met-photos .pol {
+            position: absolute;
+            background: white;
+            padding: 10px 10px 30px;
+            box-shadow: 0 16px 40px rgba(255,143,181,0.25);
+            border-radius: 4px;
+            transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1);
+        }
+        .met-photos .pol img {
+            display: block;
+            border-radius: 2px;
+            height: auto;
+            object-fit: contain;
+        }
+        .met-photos .pol .cap {
+            font-family: 'Handlee', cursive;
+            font-size: 0.85rem;
+            color: #5A3A4E;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .met-photos .pol-a { top: 0; left: 10%; transform: rotate(-7deg); z-index: 3; }
+        .met-photos .pol-b { top: 30%; right: 8%; transform: rotate(8deg); z-index: 2; }
+        .met-photos .pol-c { bottom: 5%; left: 18%; transform: rotate(-3deg); z-index: 4; }
+        .met-photos .pol:hover { transform: rotate(0deg) scale(1.04); z-index: 10; }
+        .tape {
+            position: absolute;
+            top: -10px; left: 50%;
+            transform: translateX(-50%) rotate(-4deg);
+            width: 60px; height: 20px;
+            background: rgba(255, 184, 209, 0.7);
+        }
+        .tape.l { background: rgba(224, 195, 252, 0.7); }
+        .tape.y { background: rgba(255, 224, 138, 0.8); }
+
+        /* ============================================================ */
+        /* CHAPTER 2: TIMELINE                                            */
+        /* ============================================================ */
+        .timeline-section { background: white; }
+        .timeline {
+            max-width: 1000px;
+            margin: 60px auto 0;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: repeating-linear-gradient(180deg, #FFB8D1 0 8px, transparent 8px 16px);
+            transform: translateX(-50%);
+        }
+        .tl-event {
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            gap: 0;
+            margin-bottom: 60px;
+            position: relative;
+            align-items: center;
+        }
+        .tl-event:last-child { margin-bottom: 0; }
+        .tl-card {
+            background: white;
+            border: 3px solid #FFD6E8;
+            border-radius: 22px;
+            padding: 22px 24px;
+            box-shadow: 0 12px 30px rgba(255,143,181,0.2);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .tl-card:hover { transform: translateY(-4px); border-color: #FF8FB5; }
+        .tl-card .when {
+            font-family: 'Mystery Quest', cursive;
+            color: #FF5A8A;
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+        .tl-card .what {
+            font-family: 'DynaPuff', cursive;
+            color: #3A2138;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        .tl-card .why {
+            font-family: 'Handlee', cursive;
+            color: #5A3A4E;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .tl-img {
+            width: 100%;
+            height: auto;
+            border-radius: 18px;
+            object-fit: contain;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .tl-dot {
+            grid-column: 2;
+            justify-self: center;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF8FB5, #FF5A8A);
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #FFB8D1, 0 6px 14px rgba(255,90,138,0.4);
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 0.7rem;
+            position: relative;
+            z-index: 2;
+        }
+        .tl-event.left .tl-card  { grid-column: 1; margin-right: 30px; }
+        .tl-event.left .tl-img   { grid-column: 3; margin-left: 30px; }
+        .tl-event.right .tl-img  { grid-column: 1; margin-right: 30px; }
+        .tl-event.right .tl-card { grid-column: 3; margin-left: 30px; }
+
+        /* ============================================================ */
+        /* CHAPTER 3: BENTO GALLERY                                       */
+        /* ============================================================ */
+        .gallery-section {
+            background: linear-gradient(180deg, #FFF5FA 0%, white 100%);
+        }
+        .bento {
+            max-width: 1100px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 200px;
+            gap: 16px;
+        }
+        .bento-tile {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1);
+        }
+        .bento-tile:hover { transform: scale(1.03) translateY(-4px); }
+        .bento-tile img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s;
+        }
+        .bento-tile:hover img { transform: scale(1.08); }
+        .bento-tile.photo-tile {
+            width: min(100%, 400px);
+            height: auto;
+            aspect-ratio: var(--photo-ratio);
+            align-self: center;
+            justify-self: center;
+        }
+        .bento-tile.photo-tile.square,
+        .bento-tile.photo-tile.portrait {
+            grid-row: span 2;
+        }
+        .bento-tile.photo-tile.portrait-feature {
+            grid-column: span 2;
+            grid-row: span 3;
+        }
+        .bento-tile.photo-tile.landscape { grid-row: span 1; }
+        .bento-tile:hover img.photo-image { transform: none; }
+        .bento-tile .caption {
+            position: absolute;
+            bottom: 14px; left: 14px; right: 14px;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(8px);
+            font-family: 'Handlee', cursive;
+            font-size: 0.95rem;
+            color: #3A2138;
+            padding: 8px 14px;
+            border-radius: 14px;
+            border: 2px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(8px);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        .bento-tile:hover .caption { transform: translateY(0); opacity: 1; }
+        .bento-tile.text-tile {
+            background: linear-gradient(135deg, #FFB8D1, #FF8FB5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            font-family: 'DynaPuff', cursive;
+            font-size: 1.6rem;
+            line-height: 1.15;
+        }
+        .bento-tile.text-tile.lilac { background: linear-gradient(135deg, #E0C3FC, #B79DFE); }
+        .bento-tile.text-tile.yellow { background: linear-gradient(135deg, #FFE08A, #FFC857); color: #5A3A00; }
+        /* tile spans */
+        .span-2 { grid-column: span 2; }
+        .row-2  { grid-row: span 2; }
+
+        /* ============================================================ */
+        /* CHAPTER 4: STATS BANNER (DARK)                                 */
+        /* ============================================================ */
+        .stats-section {
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255,143,181,0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(183,157,254,0.4) 0%, transparent 50%),
+                linear-gradient(135deg, #2D1A2E 0%, #3A1F3A 100%);
+            color: white;
+            text-align: center;
+        }
+        .stats-section .section-title { color: white; }
+        .stats-section .section-lead { color: rgba(255,255,255,0.85); margin-left: auto; margin-right: auto; text-align: center; }
+        .stats-grid {
+            max-width: 900px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .stat-block {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(8px);
+            border: 1.5px solid rgba(255,184,209,0.25);
+            border-radius: 22px;
+            padding: 30px 18px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .stat-block:hover { transform: translateY(-6px); border-color: rgba(255,184,209,0.6); }
+        .stat-num {
+            font-family: 'Mystery Quest', cursive;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            background: linear-gradient(135deg, #FFD6E8, #FFC857);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+        .stat-label {
+            font-family: 'Handlee', cursive;
+            color: rgba(255,255,255,0.85);
+            margin-top: 10px;
+            font-size: 1.05rem;
+        }
+        .mini-stats {
+            max-width: 900px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            font-family: 'Handlee', cursive;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+        .mini-stats div {
+            padding: 12px 14px;
+            border-left: 2px dashed #FFB8D1;
+            text-align: left;
+        }
+        .mini-stats div b { color: #FFC857; font-weight: 700; }
+
+        /* ============================================================ */
+        /* CHAPTER 5: QUOTE BANNER                                        */
+        /* ============================================================ */
+        .quote-section {
+            background: linear-gradient(180deg, #FFF5E6 0%, #FFE5B4 100%);
+            text-align: center;
+        }
+        .big-quote {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .big-quote::before, .big-quote::after {
+            font-family: 'Mystery Quest', cursive;
+            color: #FF5A8A;
+            font-size: 8rem;
+            line-height: 0.5;
+            position: absolute;
+            opacity: 0.4;
+        }
+        .big-quote::before { content: '"'; top: 30px; left: -10px; }
+        .big-quote::after  { content: '"'; bottom: -10px; right: -10px; }
+        .quote-text {
+            font-family: 'DynaPuff', cursive;
+            font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+            line-height: 1.25;
+            color: #3A2138;
+            margin-bottom: 24px;
+        }
+        .quote-text em {
+            font-style: normal;
+            color: #FF5A8A;
+        }
+        .quote-attr {
+            font-family: 'Handlee', cursive;
+            color: #5A3A4E;
+            font-size: 1.1rem;
+        }
+
+        /* ============================================================ */
+        /* CHAPTER 6: OUR MEMORIES (scrapbook board)                     */
+        /* ============================================================ */
+        .memories-section {
+            background:
+                radial-gradient(circle at 15% 20%, rgba(255,214,232,0.4) 0%, transparent 35%),
+                radial-gradient(circle at 85% 80%, rgba(224,195,252,0.4) 0%, transparent 35%),
+                #FFFAFC;
+            position: relative;
+        }
+        .memories-board {
+            max-width: 1100px;
+            margin: 60px auto 0;
+            column-count: 3;
+            column-gap: 22px;
+        }
+        .memo {
+            break-inside: avoid;
+            margin-bottom: 22px;
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            display: block;
+        }
+        .memo:hover {
+            transform: rotate(0deg) scale(1.03) translateY(-4px) !important;
+            position: relative;
+            z-index: 5;
+        }
+
+        /* iMessage-style chat mockup */
+        .chat-mock {
+            background: #F0F0F2;
+            border-radius: 22px;
+            padding: 18px 14px 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .chat-mock .chat-header {
+            text-align: center;
+            color: #888;
+            font-family: 'Handlee', cursive;
+            font-size: 0.78rem;
+            margin-bottom: 8px;
+        }
+        .chat-mock .bubble {
+            max-width: 78%;
+            padding: 9px 14px;
+            border-radius: 18px;
+            font-family: 'Handlee', cursive;
+            font-size: 0.95rem;
+            line-height: 1.3;
+            word-wrap: break-word;
+        }
+        .chat-mock .received {
+            background: #E5E5EA;
+            color: #1c1c1e;
+            align-self: flex-start;
+            border-bottom-left-radius: 6px;
+        }
+        .chat-mock .sent {
+            background: linear-gradient(135deg, #FF8FB5, #FF5A8A);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 6px;
+        }
+
+        /* sticky note */
+        .sticky {
+            padding: 26px 22px 24px;
+            box-shadow:
+                0 14px 26px rgba(0, 0, 0, 0.1),
+                inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+            position: relative;
+            border-radius: 2px;
+        }
+        .sticky::before {
+            content: '';
+            position: absolute;
+            top: -10px; left: 50%;
+            transform: translateX(-50%) rotate(-3deg);
+            width: 56px; height: 18px;
+            background: rgba(255, 255, 255, 0.65);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+        .sticky.yellow { background: linear-gradient(135deg, #FFF4B0, #FFE08A); }
+        .sticky.pink   { background: linear-gradient(135deg, #FFE5F1, #FFB8D1); }
+        .sticky.lilac  { background: linear-gradient(135deg, #EBDDFD, #C9ABF8); }
+        .sticky.peach  { background: linear-gradient(135deg, #FFE5D0, #FFCBA8); }
+        .sticky p {
+            font-family: 'Handlee', cursive;
+            font-size: 1.05rem;
+            color: #3A2138;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* gif card (polaroid-ish) */
+        .gif-card {
+            background: white;
+            padding: 10px 10px 22px;
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+            border-radius: 6px;
+            border: 1px solid rgba(255, 184, 209, 0.3);
+        }
+        .gif-card img {
+            display: block;
+            width: 100%;
+            border-radius: 4px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+        .gif-card .gif-cap {
+            font-family: 'Handlee', cursive;
+            text-align: center;
+            color: #5A3A4E;
+            font-size: 0.92rem;
+            margin-top: 10px;
+        }
+
+        /* fake game stat card */
+        .game-card {
+            background: linear-gradient(135deg, #1F1538 0%, #3A1F3A 100%);
+            color: white;
+            padding: 22px 20px 18px;
+            border-radius: 18px;
+            border: 2px solid rgba(255, 184, 209, 0.25);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+        .game-card .game-tag {
+            font-family: 'Matemasie', cursive;
+            color: #FFC857;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        .game-card .game-title {
+            font-family: 'DynaPuff', cursive;
+            color: #FFD6E8;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 14px;
+            line-height: 1.1;
+        }
+        .game-card .game-stats {
+            font-family: 'Handlee', cursive;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 10px;
+        }
+        .game-card .game-stats div {
+            padding: 6px 0;
+            border-bottom: 1px dashed rgba(255, 184, 209, 0.18);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .game-card .game-stats div:last-child { border-bottom: none; }
+        .game-card .game-stats b {
+            color: #FFC857;
+            font-family: 'Mystery Quest', cursive;
+            font-size: 1.25rem;
+            font-weight: normal;
+        }
+        .game-card .game-note {
+            font-family: 'Handlee', cursive;
+            color: #FF8FB5;
+            text-align: center;
+            font-style: italic;
+            font-size: 0.88rem;
+        }
+
+        /* music card */
+        .music-card {
+            background: linear-gradient(135deg, #FF5A8A 0%, #B79DFE 100%);
+            color: white;
+            padding: 18px 18px 16px;
+            border-radius: 18px;
+            box-shadow: 0 14px 30px rgba(255, 90, 138, 0.3);
+        }
+        .music-card .music-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .music-card .music-art {
+            width: 52px;
+            height: 52px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .music-card .track-title {
+            font-family: 'DynaPuff', cursive;
+            font-size: 1.1rem;
+            line-height: 1.1;
+        }
+        .music-card .track-artist {
+            font-family: 'Handlee', cursive;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.82rem;
+            margin-top: 4px;
+        }
+        .music-card .music-play {
+            margin-left: auto;
+            width: 36px;
+            height: 36px;
+            background: white;
+            color: #FF5A8A;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .music-card .progress {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .music-card .progress-fill {
+            width: 65%;
+            height: 100%;
+            background: white;
+            border-radius: 2px;
+        }
+        .music-card .track-meta {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Handlee', cursive;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ============================================================ */
+        /* FOREVER (final section — open typography layout)               */
+        /* ============================================================ */
+        .forever-section {
+            background:
+                radial-gradient(ellipse at 15% 18%, #FFE5D0 0%, transparent 45%),
+                radial-gradient(ellipse at 85% 82%, #FFD6E8 0%, transparent 45%),
+                radial-gradient(ellipse at 50% 50%, #FFF5E1 0%, transparent 60%),
+                #FFFAF0;
+            color: #3A2138;
+            text-align: center;
+            padding: 140px 24px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* subtle dotted texture */
+        .forever-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255, 143, 181, 0.10) 1.5px, transparent 1.5px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* huge faded ∞ watermark behind everything */
+        .forever-section::after {
+            content: '∞';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            font-family: 'Mystery Quest', cursive;
+            font-size: clamp(20rem, 60vw, 38rem);
+            color: rgba(255, 90, 138, 0.05);
+            pointer-events: none;
+            z-index: 0;
+            line-height: 1;
+            font-style: italic;
+        }
+
+        .forever-content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .always-stamp {
+            display: inline-block;
+            font-family: 'Matemasie', cursive;
+            background: linear-gradient(135deg, #FFE08A, #FFC857);
+            color: #5A3A00;
+            padding: 8px 28px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            letter-spacing: 3px;
+            transform: rotate(-2deg);
+            box-shadow: 0 5px 0 #E8A93C, 0 10px 22px rgba(232, 169, 60, 0.3);
+            margin-bottom: 28px;
+        }
+
+        .always-title {
+            font-family: 'DynaPuff', cursive;
+            font-size: clamp(5rem, 18vw, 13rem);
+            line-height: 0.85;
+            letter-spacing: -3px;
+            margin-bottom: 22px;
+            font-weight: 700;
+        }
+        .always-title .word {
+            background: linear-gradient(135deg, #FF5A8A 0%, #B79DFE 55%, #FFC857 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .always-title .dot {
+            color: #FF5A8A;
+            font-family: 'Mystery Quest', cursive;
+            display: inline-block;
+            transform: scale(1.3) translateY(0.05em);
+        }
+
+        .always-tagline {
+            font-family: 'Handlee', cursive;
+            font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+            color: #5A3A4E;
+            line-height: 1.55;
+            margin-bottom: 60px;
+        }
+        .always-tagline em {
+            font-style: normal;
+            color: #FF5A8A;
+            font-weight: bold;
+        }
+
+        .always-divider {
+            font-family: 'Mystery Quest', cursive;
+            color: #FF5A8A;
+            font-size: 1.3rem;
+            letter-spacing: 14px;
+            opacity: 0.55;
+            margin: 0 0 50px;
+        }
+
+        .promise-intro {
+            font-family: 'Handlee', cursive;
+            color: #FF5A8A;
+            font-size: 1.4rem;
+            margin-bottom: 14px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .promise-stack {
+            margin-bottom: 60px;
+        }
+        .promise-line {
+            font-family: 'DynaPuff', cursive;
+            font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+            color: #3A2138;
+            line-height: 1.35;
+            padding: 14px 12px;
+            border-bottom: 1px dashed rgba(255, 143, 181, 0.4);
+            transition: all 0.3s;
+            cursor: default;
+        }
+        .promise-line:last-child { border-bottom: none; }
+        .promise-line:hover {
+            transform: translateY(-2px);
+            color: #FF5A8A;
+            letter-spacing: 0.5px;
+        }
+        .promise-line.big {
+            font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+            font-weight: 700;
+            color: #2A1528;
+        }
+        .promise-line.big .accent {
+            display: inline-block;
+            color: #FFC857;
+            font-family: 'Mystery Quest', cursive;
+            font-size: 0.65em;
+            margin: 0 8px;
+            transform: translateY(-0.15em);
+        }
+
+        .always-infinity {
+            font-family: 'Mystery Quest', cursive;
+            font-size: clamp(5rem, 11vw, 8rem);
+            line-height: 0.85;
+            background: linear-gradient(135deg, #FF5A8A, #B79DFE 55%, #FFC857);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 30px 0 18px;
+            animation: breathe 3s ease-in-out infinite;
+            display: inline-block;
+            font-style: italic;
+        }
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 14px rgba(255, 90, 138, 0.2)); }
+            50%      { transform: scale(1.06); filter: drop-shadow(0 0 24px rgba(255, 90, 138, 0.4)); }
+        }
+
+        .always-signature {
+            font-family: 'Handlee', cursive;
+            color: #5A3A4E;
+            font-size: 1.15rem;
+            margin-bottom: 60px;
+        }
+        .always-signature .stamp {
+            font-style: italic;
+            color: #FF5A8A;
+        }
+
+        .always-tail {
+            font-family: 'Handlee', cursive;
+            color: #5A3A4E;
+            font-size: 0.9rem;
+            border-top: 1px dashed rgba(255, 143, 181, 0.45);
+            padding-top: 24px;
+            margin-top: 24px;
+            opacity: 0.85;
+            position: relative;
+            z-index: 2;
+        }
+        .always-tail a {
+            color: #FF5A8A;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-underline-offset: 4px;
+            margin-left: 14px;
+        }
+        .always-tail a:hover { color: #B79DFE; }
+
+        @media (max-width: 540px) {
+            .forever-section { padding: 90px 18px 40px; }
+            .always-divider { letter-spacing: 8px; font-size: 1.1rem; }
+            .promise-line { padding: 12px 4px; }
+        }
+
+        /* ============================================================ */
+        /* SCROLL REVEAL                                                  */
+        /* ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-l {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal-l.in { opacity: 1; transform: translateX(0); }
+        .reveal-r {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal-r.in { opacity: 1; transform: translateX(0); }
+
+        /* floating decorations sprinkled around */
+        .deco {
+            position: absolute;
+            font-size: 1.8rem;
+            opacity: 0.5;
+            pointer-events: none;
+            user-select: none;
+        }
+        @keyframes spinSlow { to { transform: rotate(360deg); } }
+        @keyframes wiggleSlow { 0%,100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+        .deco.spin { animation: spinSlow 18s linear infinite; }
+        .deco.wig { animation: wiggleSlow 4s ease-in-out infinite; }
+
+        .music-player {
+            position: fixed;
+            left: 50%;
+            bottom: 24px;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: min(320px, calc(100vw - 32px));
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 143, 181, 0.45);
+            border-radius: 20px;
+            background: rgba(255, 250, 252, 0.94);
+            box-shadow: 0 10px 30px rgba(90, 58, 78, 0.18);
+            backdrop-filter: blur(12px);
+        }
+        .music-play {
+            flex: 0 0 46px;
+            width: 46px;
+            height: 46px;
+            border: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF8FB5, #FF5A8A);
+            color: white;
+            font-size: 1.15rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255, 90, 138, 0.35);
+            transition: transform 0.2s ease;
+        }
+        .music-play:hover { transform: scale(1.06); }
+        .music-play:focus-visible { outline: 3px solid #8E7AD8; outline-offset: 3px; }
+        .music-details { min-width: 0; }
+        .music-title {
+            font-family: 'DynaPuff', cursive;
+            color: #5A3A4E;
+            font-size: 0.93rem;
+            line-height: 1.25;
+        }
+        .music-status {
+            margin-top: 4px;
+            color: #FF5A8A;
+            font-family: 'Handlee', cursive;
+            font-size: 0.9rem;
+        }
+
+        /* ============================================================ */
+        /* RESPONSIVE                                                     */
+        /* ============================================================ */
+        @media (max-width: 900px) {
+            .met-grid { grid-template-columns: 1fr; gap: 40px; }
+            .met-photos {
+                position: relative;
+                height: auto;
+                max-width: 100%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 26px;
+            }
+            .met-photos .pol-a,
+            .met-photos .pol-b,
+            .met-photos .pol-c {
+                position: relative !important;
+                top: auto !important;
+                bottom: auto !important;
+                left: auto !important;
+                right: auto !important;
+            }
+            .met-photos .pol-a { transform: rotate(-3deg); }
+            .met-photos .pol-b { transform: rotate(4deg); }
+            .met-photos .pol-c { transform: rotate(-2deg); }
+
+            .timeline::before { left: 20px; }
+            .tl-event { grid-template-columns: 40px 1fr; gap: 20px; }
+            .tl-event.left .tl-card,
+            .tl-event.right .tl-card  { grid-column: 2; margin: 0; }
+            .tl-event.left .tl-img,
+            .tl-event.right .tl-img   { grid-column: 2; margin: 16px 0 0; }
+            .tl-dot { grid-column: 1; }
+
+            .bento {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 160px;
+            }
+            .bento-tile.photo-tile { width: min(100%, 384px); }
+            .bento-tile.photo-tile.square,
+            .bento-tile.photo-tile.portrait,
+            .bento-tile.photo-tile.portrait-feature { grid-row: span 3; }
+            .bento-tile.photo-tile.landscape { grid-row: span 2; }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+            .mini-stats { grid-template-columns: 1fr; }
+            .memories-board { column-count: 2; }
+            section { padding: 70px 20px; }
+        }
+        @media (max-width: 540px) {
+            .hero { min-height: 100vh; min-height: 100svh; padding: 44px 16px 88px; }
+            .scroll-arrow { display: none; }
+
+            /* show hero polaroids on mobile, just smaller and tucked into corners */
+            .hero-photos .pol { padding: 5px 5px 14px; }
+            .hero-photos .pol img { width: 64px !important; height: auto !important; }
+            .hero-photos .pol-1 { top: 4%;  left: 2%;  }
+            .hero-photos .pol-2 { top: 5%;  right: 2%; }
+            .hero-photos .pol-3 { bottom: 22%; left: 2%; }
+            .hero-photos .pol-4 { bottom: 24%; right: 2%; }
+
+            .hero-gif { width: clamp(104px, 28vw, 132px); height: clamp(104px, 28vw, 132px); }
+            .hero-tag { font-size: 0.82rem; letter-spacing: 1.5px; }
+            .hero h1 { font-size: clamp(2.05rem, 10vw, 3rem); line-height: 1.08; }
+            .hero-sub { font-size: clamp(1rem, 4.2vw, 1.2rem); margin-top: 14px; }
+            .hero-nav { gap: 8px; margin-top: 22px; }
+            .hero-nav a { padding: 9px 14px; font-size: 0.95rem; }
+
+            .met-photos .pol img { max-width: calc(100vw - 80px); height: auto !important; }
+
+            .memories-board { column-count: 1; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .bento { grid-template-columns: 1fr; }
+            .span-2 { grid-column: span 1; }
+            .bento-tile.photo-tile.portrait-feature { grid-column: span 1; }
+            .big-quote::before { font-size: 5rem; top: 20px; }
+            .big-quote::after { font-size: 5rem; bottom: 0; }
+        }
+        @media (max-width: 360px) {
+            .bento-tile.photo-tile.square { grid-row: span 2; }
+            .bento-tile.photo-tile.landscape { grid-row: span 1; }
+            .bento-tile.photo-tile.portrait-feature {
+                grid-row: span 2;
+                max-width: 252px;
+            }
+        }
+        @media (max-width: 540px) {
+            .music-player { bottom: 12px; }
+        }
+
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #FFFAFC; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #FFB8D1, #FF8FB5); border-radius: 6px; border: 3px solid #FFFAFC; }
+    </style>
+
+
+<meta name="description" content="Ten months together: a random group chat, mutual secret crushes, a DM proposal, long-distance love, and the meeting we cannot wait for.">
+<meta property="og:title" content="Ten months of us">
+<meta property="og:description" content="Ten months together: a random group chat, mutual secret crushes, a DM proposal, long-distance love, and the meeting we cannot wait for.">
+<meta property="og:image" content="assets/gallery-01.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ten months of us">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ten months of us">
+<meta name="twitter:description" content="Ten months together: a random group chat, mutual secret crushes, a DM proposal, long-distance love, and the meeting we cannot wait for.">
+<meta name="twitter:image" content="assets/gallery-01.jpg">
+<meta name="theme-color" content="#FFFBF3">
+</head>
+<body>
+
+    <aside class="music-player" aria-label="Music player">
+        <button class="music-play" id="musicPlay" type="button" aria-label="Play Your fav song, my love" aria-pressed="false">▶</button>
+        <div class="music-details">
+            <div class="music-title">Your fav song, my love</div>
+            <div class="music-status" id="musicStatus" role="status" aria-live="polite">Tap to play ♡</div>
+        </div>
+        <audio id="loveSong" src="assets/music.mp3.mp3" preload="metadata"></audio>
+    </aside>
+
+    <!-- ============================================================ -->
+    <!-- HERO                                                          -->
+    <!-- ============================================================ -->
+    <section class="hero" id="hero">
+
+        <!-- floating polaroids in background -->
+        <span id="hero-photo-count" data-lovely-hint="count:2:4:photos" style="display:none" data-lovely-id="t1">4</span>
+        <div class="hero-photos">
+            <div class="pol pol-1">
+                <img src="assets/hero-01.jpg" alt="our story photo hero 01" style="width:140px;" data-lovely-id="i1">
+            </div>
+            <div class="pol pol-2">
+                <img src="assets/hero-02.jpg" alt="our story photo hero 02" style="width:130px;" data-lovely-id="i2">
+            </div>
+            <div class="pol pol-3">
+                <img src="assets/hero-03.jpg" alt="our story photo hero 03" style="width:140px;" data-lovely-id="i3">
+            </div>
+            <div class="pol pol-4">
+                <img src="assets/hero-04.jpg" alt="our story photo hero 04" style="width:130px;" data-lovely-id="i4">
+            </div>
+        </div>
+
+        <!-- decorative scattered emojis -->
+        <span class="deco wig" style="top: 22%; left: 26%;" data-lovely-id="t2">✦</span>
+        <span class="deco spin" style="top: 35%; right: 28%; opacity: 0.4;" data-lovely-id="t3">🌼</span>
+        <span class="deco wig" style="bottom: 28%; left: 32%;" data-lovely-id="t4">⭐</span>
+        <span class="deco wig" style="bottom: 35%; right: 30%;" data-lovely-id="t5">🌸</span>
+
+        <div class="hero-content">
+            <img class="hero-gif" src="https://media.tenor.com/DZP5xX-W9GsAAAAi/care-bubu.gif" alt="us" data-lovely-id="i5">
+            <p class="hero-tag" data-lovely-id="t6">TEN MONTHS ✦ STILL OUR STORY</p>
+            <h1 data-lovely-id="g1">
+                10 Months<br>Into Loving You
+            </h1>
+            <p class="hero-sub" data-lovely-id="g2">
+                an entirely unexpected love story <br>
+                <span class="text-pink-500" data-lovely-id="t8">from one random group chat to my favorite person 🥹</span>
+            </p>
+            <nav class="hero-nav" aria-label="Page sections">
+                <a href="#story">Our story</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#memories">Memories</a>
+                <a href="#forever">Always</a>
+            </nav>
+        </div>
+
+        <a href="#story" class="scroll-arrow">
+            <span class="arr" data-lovely-id="t10">↓</span>
+            <span data-lovely-id="t11">keep going</span>
+        </a>
+    </section>
+
+    <!-- wavy divider -->
+    <svg class="wavy" viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="#FFF5FA"></path>
+    </svg>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 1: HOW WE MET                                          -->
+    <!-- ============================================================ -->
+    <section class="met-section" id="story">
+        <span class="deco wig" style="top: 12%; right: 8%; font-size: 2rem;" data-lovely-id="t12">🌸</span>
+        <span id="met-photo-count" data-lovely-hint="count:2:3:polaroids" style="display:none" data-lovely-id="t13">3</span>
+
+        <div class="met-grid">
+            <div class="met-text reveal-l">
+                <span class="section-eyebrow" data-lovely-id="t14">CHAPTER ONE ✦</span>
+                <h2 class="section-title" data-lovely-id="g3">our random GC <span class="shimmer-text" data-lovely-id="t15">beginning.</span></h2>
+                <p class="section-lead mb-4" data-lovely-id="t16">
+                    we met in a random group chat. nothing about that little meeting felt important yet—until it became the beginning of us.
+                </p>
+                <p class="section-lead" data-lovely-id="g4">
+                    but i remember <em class="text-pink-500 not-italic font-bold" data-lovely-id="t17">meri betu</em>.
+                    you had a secret crush on me, and I liked you secretly too.
+                </p>
+                <div class="met-quote" data-lovely-id="g5">
+                    "one random group chat.<br>
+one very lucky us." 🥹
+                </div>
+                <p class="section-lead" data-lovely-id="g6">
+                    one minute we were just talking in the GC.<br>
+                    then came the DMs, the little hints, and all the feelings we were hiding.
+                </p>
+            </div>
+
+            <div class="met-photos reveal-r">
+                <div class="pol pol-a">
+                    <div class="tape"></div>
+                    <img src="assets/beginning-01.jpg" alt="our story photo beginning 01" style="width:200px;" data-lovely-id="i6">
+                    <p class="cap" data-lovely-id="t18">— the random GC that started it —</p>
+                </div>
+                <div class="pol pol-b">
+                    <div class="tape l"></div>
+                    <img src="assets/beginning-02.jpg" alt="our story photo beginning 02" style="width:170px;" data-lovely-id="i7">
+                    <p class="cap" data-lovely-id="t19">— little hints, big feelings —</p>
+                </div>
+                <div class="pol pol-c">
+                    <div class="tape y"></div>
+                    <img src="assets/beginning-03.jpg" alt="our story photo beginning 03" style="width:200px;" data-lovely-id="i8">
+                    <p class="cap" data-lovely-id="t20">— still writing our story —</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 2: TIMELINE                                            -->
+    <!-- ============================================================ -->
+    <section class="timeline-section" id="timeline">
+        <div class="text-center max-w-3xl mx-auto reveal">
+            <span class="section-eyebrow lilac" data-lovely-id="t21">CHAPTER TWO ✦</span>
+            <h2 class="section-title" data-lovely-id="g7">from secret crushes to <span class="shimmer-text" data-lovely-id="t22">“us” 💌</span></h2>
+            <p class="section-lead mx-auto" data-lovely-id="g8">
+                the real milestones we know by heart: one random GC, two secret crushes, and a DM that changed everything. 🤝
+            </p>
+        </div>
+
+        <span id="timeline-count" data-lovely-hint="count:2:7:milestones" style="display:none" data-lovely-id="t23">6</span>
+        <div class="timeline">
+            <!-- event 1 -->
+            <div class="tl-event left reveal">
+                <div class="tl-card">
+                    <div class="when" data-lovely-id="t24">·  the random GC  ·</div>
+                    <div class="what" data-lovely-id="t25">our unexpected beginning</div>
+                    <p class="why" data-lovely-id="t26">
+                        of all the people in that group chat, somehow we found each other.
+                    </p>
+                </div>
+                <div class="tl-dot" data-lovely-id="t27">✦</div>
+                <img class="tl-img" src="assets/timeline-01.jpg" alt="our story photo timeline 01" data-lovely-id="i9">
+            </div>
+            <!-- event 2 -->
+            <div class="tl-event right reveal">
+                <img class="tl-img" src="assets/timeline-02.jpg" alt="our story photo timeline 02" data-lovely-id="i10">
+                <div class="tl-dot" data-lovely-id="t28">✿</div>
+                <div class="tl-card">
+                    <div class="when" data-lovely-id="t29">·  the secret crush era  ·</div>
+                    <div class="what" data-lovely-id="t30">both of us, quietly falling</div>
+                    <p class="why" data-lovely-id="t31">
+                        you had a big secret crush on me. I liked you secretly too, dropping little hints and hoping you would notice.
+                    </p>
+                </div>
+            </div>
+            <!-- event 3 -->
+            <div class="tl-event left reveal">
+                <div class="tl-card">
+                    <div class="when" data-lovely-id="t32">·  12 February 2026  ·</div>
+                    <div class="what" data-lovely-id="t33">you proposed to me online</div>
+                    <p class="why" data-lovely-id="t34">
+                        Your DM proposal made our feelings real. A screen between us, and my heart saying yes.
+                    </p>
+                </div>
+                <div class="tl-dot" data-lovely-id="t35">★</div>
+                <img class="tl-img" src="assets/timeline-03.jpg" alt="our story photo timeline 03" data-lovely-id="i11">
+            </div>
+            <!-- event 4 -->
+            <div class="tl-event right reveal">
+                <img class="tl-img" src="assets/timeline-04.jpg" alt="our story photo timeline 04" data-lovely-id="i12">
+                <div class="tl-dot" data-lovely-id="t36">❀</div>
+                <div class="tl-card">
+                    <div class="when" data-lovely-id="t37">·  26 March 2026  ·</div>
+                    <div class="what" data-lovely-id="t38">we finally said it out loud</div>
+                    <p class="why" data-lovely-id="t39">
+                        “I had a feeling that you liked me too” — and suddenly our secret crushes were not so secret anymore.
+                    </p>
+                </div>
+            </div>
+            <!-- event 5 (shown when milestone count is raised) -->
+            <div class="tl-event left reveal">
+                <div class="tl-card">
+                    <div class="when" data-lovely-id="t40">·  ten months of us  ·</div>
+                    <div class="what" data-lovely-id="t41">still choosing each other</div>
+                    <p class="why" data-lovely-id="t42">
+                        Long distance is part of our story right now. I am grateful for every message and excited for all the chapters still ahead.
+                    </p>
+                </div>
+                <div class="tl-dot" data-lovely-id="t43">✦</div>
+                <img class="tl-img" src="assets/timeline-05.jpg" alt="our story photo timeline 05" data-lovely-id="i13">
+            </div>
+            <!-- event 6 (shown when milestone count is raised) -->
+            <div class="tl-event right reveal">
+                <img class="tl-img" src="assets/timeline-06.jpg" alt="our story photo timeline 06" data-lovely-id="i14">
+                <div class="tl-dot" data-lovely-id="t44">✿</div>
+                <div class="tl-card">
+                    <div class="when" data-lovely-id="t45">·  the first hello in person  ·</div>
+                    <div class="what" data-lovely-id="t46">the moment I cannot wait for</div>
+                    <p class="why" data-lovely-id="t47">
+                        No screen between us, just the two of us finally in the same place. Until then, I am holding onto the anticipation.
+                    </p>
+                </div>
+            </div>
+            <!-- event 7 (shown when milestone count is raised) -->
+            <div class="tl-event left reveal">
+                <div class="tl-card">
+                    <div class="when" data-lovely-id="t48">·  what comes next  ·</div>
+                    <div class="what" data-lovely-id="t49">one day closer…</div>
+                    <p class="why" data-lovely-id="t50">
+                        More messages, more love, and the day we finally meet. The next chapter is still ours to write.
+                    </p>
+                </div>
+                <div class="tl-dot" data-lovely-id="t51">★</div>
+                <img class="tl-img" src="assets/timeline-07.jpg" alt="our story photo timeline 07" data-lovely-id="i15">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 3: BENTO GALLERY                                       -->
+    <!-- ============================================================ -->
+    <section class="gallery-section" id="gallery">
+        <div class="text-center max-w-3xl mx-auto reveal">
+            <span class="section-eyebrow yellow" data-lovely-id="t52">CHAPTER THREE ✦</span>
+            <h2 class="section-title" data-lovely-id="g9">our little gallery <span class="shimmer-text" data-lovely-id="t53">📸</span></h2>
+            <p class="section-lead mx-auto" data-lovely-id="t54">
+                A place for your favorite photos of meri betu and your jaanuu.
+            </p>
+        </div>
+
+        <span id="bento-count" data-lovely-hint="count:4:10:tiles" style="display:none" data-lovely-id="t55">7</span>
+        <div class="bento reveal">
+            <div class="bento-tile span-2 row-2 photo-tile square" style="--photo-ratio: 800 / 793;">
+                <img class="photo-image" src="assets/gallery-01.jpg" alt="our story photo gallery 01" data-lovely-id="i16">
+                <div class="caption" data-lovely-id="t56">a favorite frame of us ♡</div>
+            </div>
+            <div class="bento-tile photo-tile square" style="--photo-ratio: 1 / 1;">
+                <img class="photo-image" src="assets/gallery-02.jpg" alt="our story photo gallery 02" data-lovely-id="i17">
+                <div class="caption" data-lovely-id="t57">a little moment to keep close 🥹</div>
+            </div>
+            <div class="bento-tile text-tile lilac" data-lovely-id="g10">
+                "miles apart,<br>still close"
+            </div>
+            <div class="bento-tile">
+                <img src="https://i.pinimg.com/originals/54/d3/ae/54d3ae04cae803cafc21389dfd31fc88.gif" alt="sunrise" data-lovely-id="i18">
+                <div class="caption" data-lovely-id="t58">even the distance feels softer with you 🌅</div>
+            </div>
+            <div class="bento-tile photo-tile portrait" style="--photo-ratio: 3 / 4;">
+                <img class="photo-image" src="assets/gallery-03.jpg" alt="our story photo gallery 03" data-lovely-id="i19">
+                <div class="caption" data-lovely-id="t59">one of our favorite little memories 🌻</div>
+            </div>
+            <div class="bento-tile text-tile yellow" data-lovely-id="g11">
+                one day,<br>same place ♡
+            </div>
+            <div class="bento-tile span-2 photo-tile portrait-feature" style="--photo-ratio: 3 / 4;">
+                <img class="photo-image" src="assets/gallery-04.jpg" alt="a photo for the day we finally meet" data-lovely-id="i20">
+                <div class="caption" data-lovely-id="t60">one day, a real photo from our first meeting ♡</div>
+            </div>
+            <!-- extra tiles (shown when tile count is raised) -->
+            <div class="bento-tile photo-tile landscape" style="--photo-ratio: 1080 / 608;">
+                <img class="photo-image" src="assets/gallery-05.jpg" alt="our story photo gallery 05" data-lovely-id="i21">
+                <div class="caption" data-lovely-id="t61">meri betu & your jaanuu, being us ♡</div>
+            </div>
+            <div class="bento-tile text-tile" data-lovely-id="g12">
+                "our first hello<br>in person 🫶"
+            </div>
+            <div class="bento-tile photo-tile square" style="--photo-ratio: 1 / 1;">
+                <img class="photo-image" src="assets/gallery-06.jpg" alt="our story photo gallery 06" data-lovely-id="i22">
+                <div class="caption" data-lovely-id="t62">from a random GC to here 💌</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 4: STATS BANNER (DARK)                                 -->
+    <!-- ============================================================ -->
+    <section class="stats-section" id="stats">
+        <div class="reveal max-w-3xl mx-auto">
+            <span class="section-eyebrow" data-lovely-id="t63">CHAPTER FOUR ✦</span>
+            <h2 class="section-title" data-lovely-id="t64">ten months, one love story.</h2>
+            <p class="section-lead" data-lovely-id="g13">
+                One random group chat. One online proposal. Ten months of choosing each other.
+                point is: <em class="text-pink-300 not-italic font-bold" data-lovely-id="t65">this is ours.</em>
+            </p>
+        </div>
+
+        <!-- The proposal date anchors the live counters. Keep YYYY-MM-DD format. -->
+        <div id="startedDateSource" style="display: none;" data-lovely-id="t66">2026-02-12T00:00:00</div>
+
+        <div class="stats-grid reveal">
+            <div class="stat-block">
+                <div class="stat-num" id="dayCount" data-lovely-id="t67">0</div>
+                <div class="stat-label" data-lovely-id="t68">days since your proposal</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-num" id="weekCount" data-lovely-id="t69">0</div>
+                <div class="stat-label" data-lovely-id="t70">weeks since your proposal</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-num" id="monthCount" data-lovely-id="t71">0</div>
+                <div class="stat-label" data-lovely-id="t72">months since your proposal</div>
+            </div>
+        </div>
+
+        <span id="ministat-count" data-lovely-hint="count:3:9:stats" style="display:none" data-lovely-id="t73">6</span>
+        <div class="mini-stats reveal">
+            <div data-lovely-id="g14">💬 <b data-lovely-id="t74">1</b> random GC that brought us together</div>
+            <div data-lovely-id="g15">💌 <b data-lovely-id="t75">1</b> online proposal, on 12 February 2026</div>
+            <div data-lovely-id="g16">💞 <b data-lovely-id="t76">2</b> secret crushes, one on each side</div>
+            <div data-lovely-id="g17">📍 <b data-lovely-id="t77">1</b> long-distance love story</div>
+            <div data-lovely-id="g18">✨ <b data-lovely-id="t78">10</b> months of us</div>
+            <div data-lovely-id="g19">🫶 <b data-lovely-id="t79">∞</b> reasons I love you</div>
+            <div data-lovely-id="g20">🌍 <b data-lovely-id="t80">1</b> first meeting still to look forward to</div>
+            <div data-lovely-id="g21">💌 <b data-lovely-id="t81">1</b> DM that changed our story</div>
+            <div data-lovely-id="g22">🐧 <b data-lovely-id="t82">1</b> your babie, always yours</div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 5: QUOTE                                               -->
+    <!-- ============================================================ -->
+    <section class="quote-section" id="quote">
+        <span class="deco spin" style="top: 30%; left: 15%;" data-lovely-id="t83">🌼</span>
+        <span class="deco wig" style="top: 25%; right: 18%;" data-lovely-id="t84">✦</span>
+
+        <div class="big-quote reveal">
+            <span class="section-eyebrow yellow" data-lovely-id="t85">CHAPTER FIVE ✦</span>
+            <p class="quote-text mt-4" data-lovely-id="g23">
+                somewhere between one random GC and this moment,<br>
+                you became <em data-lovely-id="t86">my favorite person.</em><br>
+                meri betu, it is you.
+            </p>
+            <p class="quote-attr" data-lovely-id="t87">— your babie, to meri betu 🫶</p>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CHAPTER 6: OUR MEMORIES                                        -->
+    <!-- ============================================================ -->
+    <section class="memories-section" id="memories">
+        <span class="deco wig" style="top: 12%; left: 10%;" data-lovely-id="t88">🌸</span>
+        <span class="deco spin" style="top: 8%; right: 14%; opacity: 0.4;" data-lovely-id="t89">✨</span>
+
+        <div class="text-center max-w-3xl mx-auto reveal">
+            <span class="section-eyebrow lilac" data-lovely-id="t90">CHAPTER SIX ✦</span>
+            <h2 class="section-title" data-lovely-id="g24">our real little milestones <span class="shimmer-text" data-lovely-id="t91">💭</span></h2>
+            <p class="section-lead mx-auto" data-lovely-id="t92">
+                The secret-crush era, the DM proposal, and the day we admitted we liked each other too. ✦
+            </p>
+        </div>
+
+        <span id="memory-count" data-lovely-hint="count:4:14:memories" style="display:none" data-lovely-id="t93">11</span>
+        <div class="memories-board reveal">
+
+            <!-- iMessage chat: mutual crushes revealed -->
+            <div class="memo chat-mock" style="transform: rotate(-1.2deg);">
+                <div class="chat-header">march 26 · the secret was out</div>
+                <div class="bubble received">I had a feeling that you liked me too</div>
+                <div class="bubble sent">YESSSSSS REALLY</div>
+                <div class="bubble received">REALLYYYYYYYYYYYY</div>
+                <div class="bubble sent">I knew you liked me so that won’t be any different</div>
+            </div>
+
+            <!-- a real little note -->
+            <div class="memo sticky yellow" style="transform: rotate(2deg);">
+                <p data-lovely-id="g25">
+                    <strong data-lovely-id="t102">“from a random GC”</strong><br><br>
+                    One group chat turned into DMs, little hints, and a secret crush on both sides. ♡
+                </p>
+            </div>
+
+            <!-- gif card 1 -->
+            <div class="memo gif-card" style="transform: rotate(-2.2deg);">
+                <img src="https://media1.tenor.com/m/9fscv__vkukAAAAC/dudu-bubu-dudu-bubu-love.gif" alt="us being us" data-lovely-id="i23">
+                <p class="gif-cap" data-lovely-id="t103">— us, finally saying it out loud ✦ —</p>
+            </div>
+
+            <!-- fake game card -->
+            <div class="memo game-card" style="transform: rotate(1deg);">
+                <div class="game-tag" data-lovely-id="t104">✦ OUR STORY SO FAR ✦</div>
+                <div class="game-title" data-lovely-id="t105">from random GC to ten months 💌</div>
+                <div class="game-stats">
+                    <div><span data-lovely-id="t106">the start</span> <b data-lovely-id="t107">1</b></div>
+                    <div><span data-lovely-id="t108">the proposal</span> <b data-lovely-id="t109">∞</b></div>
+                    <div><span data-lovely-id="t110">our anniversary</span> <b data-lovely-id="t111">0</b></div>
+                </div>
+                <p class="game-note" data-lovely-id="t112">— 12 February 2026 · ten months of us —</p>
+            </div>
+
+            <!-- sticky note: wifi -->
+            <div class="memo sticky pink" style="transform: rotate(-1.6deg);">
+                <p data-lovely-id="g26">
+                    <strong data-lovely-id="t113">“the DM that changed everything.”</strong><br><br>
+                    On 12 February 2026, you proposed to me online. I still carry that moment with me. 💌
+                </p>
+            </div>
+
+            <!-- music card -->
+            <div class="memo music-card" style="transform: rotate(-1deg);">
+                <div class="music-row">
+                    <div class="music-art" data-lovely-id="t114">🎵</div>
+                    <div>
+                        <p class="track-title" data-lovely-id="t115">our story</p>
+                        <p class="track-artist" data-lovely-id="t116">— from one random GC to here —</p>
+                    </div>
+                    <div class="music-play" data-lovely-id="t117">▶</div>
+                </div>
+                <div class="progress">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="track-meta">
+                    <span data-lovely-id="t118">10 months</span>
+                    <span data-lovely-id="t119">forever ∞</span>
+                </div>
+            </div>
+
+            <!-- gif card 2 -->
+            <div class="memo gif-card" style="transform: rotate(2deg);">
+                <img src="https://media1.tenor.com/m/m7isyFHYBRYAAAAC/%EB%AA%A8%EC%B0%8C-%EB%AA%A8%EB%AA%A8%EC%B0%8C.gif" alt="laughing" data-lovely-id="i24">
+                <p class="gif-cap" data-lovely-id="t120">— your babie, always smiling —</p>
+            </div>
+
+            <!-- a real little note from the crush era -->
+            <div class="memo sticky pink" style="transform: rotate(1.4deg);">
+                <p><strong>she told someone about me</strong><br><br>
+                “he is my guy.”<br>
+                A tiny line from before we were together that still means so much to me. ♡</p>
+            </div>
+
+            <!-- a note for the day we meet -->
+            <div class="memo sticky lilac" style="transform: rotate(2.4deg);">
+                <p data-lovely-id="g27">
+                    <strong data-lovely-id="t129">“the first hello still ahead.”</strong><br><br>
+                    We are still long-distance, and I cannot wait until we meet in person. Until then, every message brings us closer. ✈️
+                </p>
+            </div>
+
+            <!-- gif card 3 -->
+            <div class="memo gif-card" style="transform: rotate(-1.5deg);">
+                <img src="https://media1.tenor.com/m/oILGv9cuM9UAAAAC/on-top-bubu.gif" alt="watching together" data-lovely-id="i25">
+                <p class="gif-cap" data-lovely-id="t130">— counting down to the same room —</p>
+            </div>
+
+            <!-- extra memories (shown when memory count is raised; the
+                 closing sticky below always stays last) -->
+
+            <!-- gif card 4 -->
+            <div class="memo gif-card" style="transform: rotate(1.8deg);">
+                <img src="https://i.pinimg.com/originals/54/d3/ae/54d3ae04cae803cafc21389dfd31fc88.gif" alt="sunrise plans" data-lovely-id="i26">
+                <p class="gif-cap" data-lovely-id="t131">— one day, no screen between us —</p>
+            </div>
+
+            <!-- sticky note: umbrella -->
+            <div class="memo sticky yellow" style="transform: rotate(-1.4deg);">
+                <p data-lovely-id="g28">
+                    <strong data-lovely-id="t132">“ten months of choosing us.”</strong><br><br>
+                    A random group chat, your online proposal, and ten months of loving you from afar. I cannot wait for our first meeting. ♡
+                </p>
+            </div>
+
+            <!-- a little note for the future -->
+            <div class="memo sticky lilac" style="transform: rotate(-1.8deg);">
+                <p><strong>the first hello in person</strong><br><br>
+                We are still long-distance, and I cannot wait until we meet. Until that day, every message is another little piece of us. ♡</p>
+            </div>
+
+            <!-- closing sticky -->
+            <div class="memo sticky peach" style="transform: rotate(-1deg);">
+                <p data-lovely-id="g29">
+                    <strong data-lovely-id="g30">“our story keeps<br>going”</strong><br><br>
+                    Ten months in, and I still cannot wait for our first hello in person. 🫶💕
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOREVER (final section — open typography)                     -->
+    <!-- ============================================================ -->
+    <section class="forever-section" id="forever">
+
+        <!-- decorative scattered marks -->
+        <span class="deco wig" style="top: 15%; left: 8%; opacity: 0.4; font-size: 1.6rem;" data-lovely-id="t140">✦</span>
+        <span class="deco spin" style="top: 22%; right: 10%; opacity: 0.35; font-size: 1.8rem;" data-lovely-id="t141">🌸</span>
+        <span class="deco wig" style="bottom: 22%; left: 12%; opacity: 0.35; font-size: 1.5rem;" data-lovely-id="t142">⭐</span>
+        <span class="deco spin" style="bottom: 30%; right: 14%; opacity: 0.35; font-size: 1.6rem;" data-lovely-id="t143">❀</span>
+
+        <div class="forever-content">
+
+            <div class="reveal">
+                <div class="always-stamp" data-lovely-id="t144">✦  NO ENDING, JUST US  ✦</div>
+
+                <h2 class="always-title">
+                    <span class="word" data-lovely-id="t145">always</span><span class="dot" data-lovely-id="t146">.</span>
+                </h2>
+
+                <p class="always-tagline" data-lovely-id="g31">
+                    This is the part where the chapters keep going.<br>
+                    The miles are real, but so is us.<br>
+                    I will keep choosing <em data-lovely-id="t147">you.</em>
+                </p>
+            </div>
+
+            <div class="always-divider reveal" data-lovely-id="t148">✦  ❀  ✦  ❀  ✦</div>
+
+            <div class="reveal">
+                <p class="promise-intro" data-lovely-id="t149">— a few things I promise to keep ~</p>
+
+                <span id="promise-count" data-lovely-hint="count:1:6:promises" style="display:none" data-lovely-id="t150">3</span>
+                <div class="promise-stack">
+                    <div class="promise-line big" data-lovely-id="g32">our love across every mile <span class="accent" data-lovely-id="t151">★</span> always</div>
+                    <div class="promise-line big" data-lovely-id="g33">showing up for us <span class="accent" data-lovely-id="t152">✦</span> always</div>
+                    <div class="promise-line big" data-lovely-id="g34">meri betu & your babie <span class="accent" data-lovely-id="t153">❀</span> always</div>
+                    <div class="promise-line big" data-lovely-id="g35">one day, our first hello <span class="accent" data-lovely-id="t154">★</span> always</div>
+                    <div class="promise-line big" data-lovely-id="g36">your jaanuu, right here <span class="accent" data-lovely-id="t155">✦</span> always</div>
+                    <div class="promise-line big" data-lovely-id="g37">every new chapter together <span class="accent" data-lovely-id="t156">❀</span> always</div>
+                </div>
+            </div>
+
+            <div class="reveal">
+                <div class="always-infinity" data-lovely-id="t157">∞</div>
+                <p class="always-signature" data-lovely-id="g38">
+                    — with all my love, <span class="stamp" data-lovely-id="t158">your jaanuu</span> 🫶
+                </p>
+            </div>
+
+            <div class="always-tail reveal" data-lovely-id="g39">
+                made with love · for meri betu · always 💕
+                <a href="#hero" data-lovely-id="t159">↺ start it over</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        // ==================== CUSTOMIZE ====================
+        // The started date lives in the hidden #startedDateSource element so
+        // it stays editable; it is read at use time (not cached here).
+        function getStartedDate() {
+            const src = document.getElementById('startedDateSource');
+            const d = new Date(src ? src.textContent.trim() : '2026-02-12T00:00:00');
+            return isNaN(d.getTime()) ? new Date('2026-02-12T00:00:00') : d;
+        }
+
+        // ==================== SCROLL REVEAL ====================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    if (entry.target.dataset.counted !== '1' && entry.target.classList.contains('stats-grid')) {
+                        entry.target.dataset.counted = '1';
+                        animateDayCounter();
+                    }
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal, .reveal-l, .reveal-r').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ==================== DAYS COUNTER ====================
+        function getDaysSince() {
+            const start = getStartedDate();
+            const now = new Date();
+            return Math.max(0, Math.floor((now - start) / (1000 * 60 * 60 * 24)));
+        }
+
+        function animateNum(el, target, duration = 1400) {
+            const t0 = performance.now();
+            function step(t) {
+                const p = Math.min(1, (t - t0) / duration);
+                const eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(target * eased).toLocaleString();
+                if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        function animateDayCounter() {
+            const days = getDaysSince();
+            const weeks = Math.floor(days / 7);
+            const months = Math.floor(days / 30.44);
+            animateNum(document.getElementById('dayCount'), days, 1500);
+            animateNum(document.getElementById('weekCount'), weeks, 1300);
+            animateNum(document.getElementById('monthCount'), months, 1100);
+        }
+
+        // ==================== TINY HEART TRAIL on click ====================
+        document.addEventListener('click', (e) => {
+            const heart = document.createElement('div');
+            heart.textContent = ['💕','✨','💖','🌸','🫶'][Math.floor(Math.random()*5)];
+            heart.style.position = 'fixed';
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            heart.style.fontSize = '1.5rem';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '999';
+            heart.style.transition = 'all 1.2s ease-out';
+            document.body.appendChild(heart);
+            requestAnimationFrame(() => {
+                heart.style.transform = `translate(${(Math.random()-0.5)*120}px, -120px) scale(2) rotate(${(Math.random()-0.5)*360}deg)`;
+                heart.style.opacity = '0';
+            });
+            setTimeout(() => heart.remove(), 1200);
+        });
+
+        // ==================== LIVE STARTED-DATE ====================
+        // Re-run the counters if the hidden date is edited after they ran.
+        (function(){
+            const src = document.getElementById('startedDateSource');
+            const grid = document.querySelector('.stats-grid');
+            if (!src || !grid) return;
+            new MutationObserver(() => {
+                if (grid.dataset.counted === '1') animateDayCounter();
+            }).observe(src, { childList: true, characterData: true, subtree: true });
+        })();
+
+        // ==================== CONFIGURABLE SECTION COUNTS ====================
+        // Each hidden *-count element (a +/- stepper in the editor) drives how
+        // many blocks of its section are shown. Stays live via MutationObserver.
+
+        // hero polaroids (2–4)
+        (function(){
+            const MINC = 2, MAXC = 4;
+            const countEl = document.getElementById('hero-photo-count');
+            const container = document.querySelector('.hero-photos');
+            if (!countEl || !container) return;
+            function count() {
+                let n = parseInt((countEl.textContent || '').trim(), 10);
+                if (isNaN(n)) n = 4;
+                return Math.max(MINC, Math.min(MAXC, n));
+            }
+            function layout() {
+                const n = count();
+                container.querySelectorAll('.pol').forEach((el, i) => {
+                    el.style.display = i < n ? '' : 'none';
+                });
+            }
+            layout();
+            new MutationObserver(layout).observe(countEl, { childList: true, characterData: true, subtree: true });
+        })();
+
+        // "how we met" polaroids (2–3)
+        (function(){
+            const MINC = 2, MAXC = 3;
+            const countEl = document.getElementById('met-photo-count');
+            const container = document.querySelector('.met-photos');
+            if (!countEl || !container) return;
+            function count() {
+                let n = parseInt((countEl.textContent || '').trim(), 10);
+                if (isNaN(n)) n = 3;
+                return Math.max(MINC, Math.min(MAXC, n));
+            }
+            function layout() {
+                const n = count();
+                container.querySelectorAll('.pol').forEach((el, i) => {
+                    el.style.display = i < n ? '' : 'none';
+                });
+            }
+            layout();
+            new MutationObserver(layout).observe(countEl, { childList: true, characterData: true, subtree: true });
+        })();
+
+        // timeline milestones (2–7); the last visible event drops its bottom
+        // margin, matching the original :last-child spacing
+        (function(){
+            const MINC = 2, MAXC = 7;
+            const countEl = document.getElementById('timeline-count');
+            const container = document.querySelector('.timeline');
+            if (!countEl || !container) return;
+            function count() {
+                let n = parseInt((countEl.textContent || '').trim(), 10);
+                if (isNaN(n)) n = 4;
+                return Math.max(MINC, Math.min(MAXC, n));
+            }
+            function layout() {
+                const n = count();
+                container.querySelectorAll('.tl-event').forEach((el, i) => {
+                    el.style.display = i < n ? '' : 'none';
+                    el.style.marginBottom = i === n - 1 ? '0' : '';
+                });
+            }
+            layout();
+            new MutationObserver(layout).observe(countEl, { childList: true, characterData: true, subtree: true });
+        })();
+
+        // bento gallery tiles (4–10)
+        (function(){
+            const MINC = 4, MAXC = 10;
+            const countEl = document.getElementById('bento-count');
+            const container = document.querySelector('.bento');
+            if (!countEl || !container) return;
+            function count() {
+                let n = parseInt((countEl.textContent || '').trim(), 10);
+                if (isNaN(n)) n = 7;
+                return Math.max(MINC, Math.min(MAXC, n));
+            }
+            function layout() {
+                const n = count();
+                container.querySelectorAll('.bento-tile').forEach((el, i) => {
+                    el.style.display = i < n ? '' : 'none';
+                });
+            }
+            layout();
+            new MutationObserver(layout).observe(countEl, { childList: true, characterData: true, subtree: true });
+        })();
+
+        // mini stats (3–9)
+        (function(){
+            const MINC = 3, MAXC = 9;
+            const countEl = document.getElementById('ministat-count');
+            const container = document.querySelector('.mini-stats');
+            if (!countEl || !container) return;
+            function count() {
+                let n = parseInt((countEl.textContent || '').trim(), 10);
+                if (isNaN(n)) n = 6;
+                return Math.max(MINC, Math.min(MAXC, n));
+            }
+            function layout() {
+                const n = count();
+                container.querySelectorAll(':scope > div').forEach((el, i) => {
+                    el.style.display = i < n ? '' : 'none';
+                });
+            }
+            layout();
+            new MutationObserver(layout).observe(countEl, { childList: true, characterData: true, subtree: true });
+        })();
+
+        // memories (4–15); the closing "…and so many more moments" sticky is
+        // always the last visible card, so the board keeps its sign-off
+        (function(){
+            const MINC = 4, MAXC = 14;
+            const countEl = document.getElementById('memory-count');
+            const container = document.querySelector('.memories-board');
+            if (!countEl || !container) return;
+            function count() {
+                let n = parseInt((countEl.textContent || '').trim(), 10);
+                if (isNaN(n)) n = 11;
+                return Math.max(MINC, Math.min(MAXC, n));
+            }
+            function layout() {
+                const n = count();
+                const memos = Array.from(container.querySelectorAll('.memo'));
+                if (!memos.length) return;
+                const closing = memos[memos.length - 1];
+                memos.slice(0, -1).forEach((el, i) => {
+                    el.style.display = i < n - 1 ? '' : 'none';
+                });
+                closing.style.display = '';
+            }
+            layout();
+            new MutationObserver(layout).observe(countEl, { childList: true, characterData: true, subtree: true });
+        })();
+
+        // promises (1–6); the last visible line drops its dashed border,
+        // matching the original :last-child rule
+        (function(){
+            const MINC = 1, MAXC = 6;
+            const countEl = document.getElementById('promise-count');
+            const container = document.querySelector('.promise-stack');
+            if (!countEl || !container) return;
+            function count() {
+                let n = parseInt((countEl.textContent || '').trim(), 10);
+                if (isNaN(n)) n = 3;
+                return Math.max(MINC, Math.min(MAXC, n));
+            }
+            function layout() {
+                const n = count();
+                container.querySelectorAll('.promise-line').forEach((el, i) => {
+                    el.style.display = i < n ? '' : 'none';
+                    el.style.borderBottom = i === n - 1 ? 'none' : '';
+                });
+            }
+            layout();
+            new MutationObserver(layout).observe(countEl, { childList: true, characterData: true, subtree: true });
+        })();
+
+        // ==================== LOVE SONG PLAYER ====================
+        (function() {
+            const audio = document.getElementById('loveSong');
+            const button = document.getElementById('musicPlay');
+            const status = document.getElementById('musicStatus');
+            if (!audio || !button || !status) return;
+
+            function updatePlayer() {
+                const isPlaying = !audio.paused && !audio.ended;
+                button.textContent = isPlaying ? 'Ⅱ' : '▶';
+                button.setAttribute('aria-label', `${isPlaying ? 'Pause' : 'Play'} Your fav song, my love`);
+                button.setAttribute('aria-pressed', String(isPlaying));
+                status.textContent = isPlaying ? 'Playing for you ♡' : 'Tap to play ♡';
+            }
+
+            button.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play().then(updatePlayer).catch(function() {
+                        status.textContent = 'Could not play the song';
+                    });
+                } else {
+                    audio.pause();
+                    updatePlayer();
+                }
+            });
+
+            audio.addEventListener('ended', updatePlayer);
+            audio.addEventListener('error', function() {
+                status.textContent = 'Could not load the song';
+            });
+        })();
+    </script>
+</body>
+</html>
